@@ -82,7 +82,7 @@ def zset_score_pairs(response, **options):
     if not response or not options['withscores']:
         return response
     it = iter(response)
-    return zip(it, imap(float, it))
+    return zip(it, imap(str, it))
 
 def int_or_none(response):
     if response is None:
